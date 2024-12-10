@@ -1,4 +1,4 @@
-From docker.arvancloud.ir/python:latest
+From python:latest
 
 WORKDIR /app
 
