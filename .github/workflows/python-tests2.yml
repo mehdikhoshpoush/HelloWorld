@@ -1,0 +1,26 @@
+name: Python Unit Tests
+
+on:
+  pull_request: # Trigger when a pull request is opened or updated
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: |
+          pip install pytest
+
+      - name: Run Tests
+        run: |
+          pytest
+
